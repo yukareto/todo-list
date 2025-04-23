@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>タスク追加</title>
+</head>
+<body>
+<h2>新しいタスクを追加</h2>
+<form method="post" th:action="@{/add}" th:object="${todo}">
+    <input placeholder="やること" required th:field="*{title}" type="text">
+    <button type="submit">追加</button>
+</form>
+<a href="/">戻る</a>
+</body>
+</html>
